@@ -46,6 +46,11 @@ const mainController = {
   index: function (req, res, next) {
     res.render("index", { about: about, menu: listaPlatos });
   },
+  detalle: (req, res, next) => {
+    const platoId = req.params.platoId;
+    const platoEncontrado = listaPlatos.find((e) => e.id == platoId);
+    res.render("detalleMenu", { plato: platoEncontrado });
+  },
 };
 
 module.exports = mainController;
