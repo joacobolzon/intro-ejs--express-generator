@@ -20,7 +20,10 @@
         <div class="ps-col l6 ps-padding-large">
           <h1 class="ps-center"><%= plato.titulo %></h1>
           <br />
-          <h4><%= plato.descripcionDetallada %></h4>
+          <h4>
+            <% if (plato.descripcionDetallada) { %> <%=
+            plato.descripcionDetallada %> <% } %>
+          </h4>
           <p class="ps-text-grey">U$S <%= plato.precio %></p>
         </div>
 
