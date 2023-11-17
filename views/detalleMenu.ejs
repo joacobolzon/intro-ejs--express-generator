@@ -21,8 +21,8 @@
           <h1 class="ps-center"><%= plato.titulo %></h1>
           <br />
           <h4>
-            <% if (plato.descripcionDetallada) { %> <%=
-            plato.descripcionDetallada %> <% } %>
+            <% if (plato.descripcionDetallada.length) { %> <%=
+            plato.descripcionDetallada %> <% } else { %> Plato típico <% } %>
           </h4>
           <p class="ps-text-grey">U$S <%= plato.precio %></p>
         </div>
